@@ -13,39 +13,41 @@
   <body>
     <div class="container">
       <h1>World Clocks</h1>
-      <select>
+      <select id="city">
         <option value="">Select a City</option>
-        <option value="">Amsterdam 🇳🇱</option>
-        <option value="">Caracas 🇻🇪</option>
-        <option value="">Sydney 🇦🇺</option>
-        <option value="">Toronto 🇨🇦</option>
-        <option value="">Cartagena 🇨🇴</option>
+        <option value="Europe/Amsterdam">Amsterdam 🇳🇱</option>
+        <option value="America/Caracas">Caracas 🇻🇪</option>
+        <option value="Australia/Sydney">Sydney 🇦🇺</option>
+        <option value="America/Toronto">Toronto 🇨🇦</option>
+        <option value="America/Bogota">Bogota 🇨🇴</option>
       </select>
-      <div class="city" id="new-york">
-        <div>
-          <h2>New York 🇺🇸</h2>
-          <div class="date"></div>
+      <div id="cities">
+        <div class="city" id="new-york">
+          <div>
+            <h2>New York</h2>
+            <div class="date"></div>
+          </div>
+          <div>
+            <div class="time"></div>
+          </div>
         </div>
-        <div>
-          <div class="time"></div>
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Tokyo</h2>
+            <div class="date"></div>
+          </div>
+          <div>
+            <div class="time"></div>
+          </div>
         </div>
-      </div>
-      <div class="city" id="tokyo">
-        <div>
-          <h2>Tokyo 🇯🇵</h2>
-          <div class="date"></div>
-        </div>
-        <div>
-          <div class="time"></div>
-        </div>
-      </div>
-      <div class="city" id="london">
-        <div>
-          <h2>London 🇬🇧</h2>
-          <div class="date"></div>
-        </div>
-        <div>
-          <div class="time"></div>
+        <div class="city" id="london">
+          <div>
+            <h2>London</h2>
+            <div class="date"></div>
+          </div>
+          <div>
+            <div class="time"></div>
+          </div>
         </div>
       </div>
     </div>
