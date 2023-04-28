@@ -17,13 +17,13 @@ function updateTime() {
   tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do, YYYY");
   tokyoTimeElement.innerHTML = tokyoTime.format("h:mm:ss [<small>]A[</small>]");
 
-  //London
-  let londonElement = document.querySelector("#london");
-  let londonDateElement = londonElement.querySelector(".date");
-  let londonTimeElement = londonElement.querySelector(".time");
-  let londonTime = moment().tz("Europe/London");
-  londonDateElement.innerHTML = londonTime.format("MMMM Do, YYYY");
-  londonTimeElement.innerHTML = londonTime.format(
+  //Caracas
+  let caracasElement = document.querySelector("#caracas");
+  let caracasDateElement = caracasElement.querySelector(".date");
+  let caracasTimeElement = caracasElement.querySelector(".time");
+  let caracasTime = moment().tz("America/Caracas");
+  caracasDateElement.innerHTML = caracasTime.format("MMMM Do, YYYY");
+  caracasTimeElement.innerHTML = caracasTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
 }
@@ -32,6 +32,9 @@ setInterval(updateTime, 1000);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace("_", "").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
